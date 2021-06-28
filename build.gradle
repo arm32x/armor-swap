@@ -17,6 +17,12 @@ group = "arm32x.minecraft"
 archivesBaseName = "armor-swap"
 version = androidGitVersion.name()
 
+repositories {
+    maven { url = "https://jitpack.io" }
+    maven { url = "https://maven.shedaniel.me" }
+    maven { url = "https://maven.terraformersmc.com/releases" }
+}
+
 dependencies {
     //to change the versions see the gradle.properties file
     minecraft "com.mojang:minecraft:${project.minecraft_version}"
@@ -28,6 +34,14 @@ dependencies {
 
     // PSA: Some older mods, compiled on Loom 0.2.1, might have outdated Maven POMs.
     // You may need to force-disable transitiveness on them.
+
+    modImplementation "com.gitlab.Lortseam:completeconfig:${project.completeconfig_version}"
+
+    modApi("me.shedaniel.cloth:cloth-config-fabric:${project.cloth_config_version}") {
+        exclude(group: "net.fabricmc.fabric-api")
+    }
+
+    modImplementation "com.terraformersmc:modmenu:${project.modmenu_version}"
 }
 
 processResources {

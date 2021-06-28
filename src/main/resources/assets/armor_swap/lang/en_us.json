@@ -1,0 +1,13 @@
+{
+    "config.armor-swap.trigger.actionType": "Action Type",
+    "config.armor-swap.trigger.actionType.pickup": "Pickup (Click)",
+    "config.armor-swap.trigger.actionType.quickMove": "Quick Move (Shift-Click)",
+    "config.armor-swap.trigger.actionType.swap": "Swap (1-9)",
+    "config.armor-swap.trigger.actionType.clone": "Clone (Pick Block)",
+    "config.armor-swap.trigger.actionType.throw": "Throw/Drop",
+    "config.armor-swap.trigger.actionType.quickCraft": "Quick Craft (Drag)",
+    "config.armor-swap.trigger.actionType.pickupAll": "Pickup All (Double Click)",
+    "config.armor-swap.trigger.mouseButton": "Mouse Button",
+    "config.armor-swap.trigger.mouseButton.primary": "Left",
+    "config.armor-swap.trigger.mouseButton.secondary": "Right"
+}
