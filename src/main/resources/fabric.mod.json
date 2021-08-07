@@ -6,7 +6,7 @@
     "description": "",
     "authors": [],
     "contact": {},
-    "license": "MIT",
+    "license": "MPL-2.0",
     "icon": "assets/armor_swap/icon.png",
     "environment": "client",
     "entrypoints": {
