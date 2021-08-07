@@ -22,5 +22,13 @@
         "fabric": "*",
         "minecraft": "1.17.x",
         "completeconfig": "1.x.x"
+    },
+    "suggests": {
+        "vanguard": "*"
+    },
+    "custom": {
+        "vanguard": {
+            "curse-project-id": "513106"
+        }
     }
 }
