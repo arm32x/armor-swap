@@ -37,7 +37,7 @@ public abstract class ClientPlayerInteractionManagerMixin {
 			return;
 		}
 
-		if (actionType == ArmorSwap.config.trigger.actionType && button == (ArmorSwap.config.trigger.mouseButton == ClickType.LEFT ? 0 : 1)) {
+		if (actionType == ArmorSwap.config.trigger.actionType && button == (ArmorSwap.config.trigger.mouseButton == ClickType.LEFT ? 0 : 1) && slotId != -999) {
 			Slot slot = playerEntity.currentScreenHandler.slots.get(slotId);
 			ItemStack stack = slot.getStack();
 			if (stack.getItem() instanceof Wearable) {
