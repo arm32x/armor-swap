@@ -18,7 +18,6 @@ version = androidGitVersion.name()
 
 repositories {
     maven { url = "https://jitpack.io" }
-    maven { url = "https://repo.spongepowered.org/maven/" }
     maven { url = "https://maven.shedaniel.me" }
     maven { url = "https://maven.terraformersmc.com/releases" }
 }
