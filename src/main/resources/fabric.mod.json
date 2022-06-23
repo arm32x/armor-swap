@@ -12,6 +12,9 @@
     "entrypoints": {
         "client": [
             "arm32x.minecraft.armorswap.ArmorSwap"
+        ],
+        "modmenu": [
+            "arm32x.minecraft.armorswap.ModMenuIntegration"
         ]
     },
     "mixins": [
@@ -20,8 +23,8 @@
     "depends": {
         "fabricloader": ">=0.12.8",
         "fabric": "*",
-        "minecraft": "1.18.x",
-        "completeconfig": "1.x.x"
+        "minecraft": "1.19.x",
+        "cloth-config": "7.x.x"
     },
     "suggests": {
         "vanguard": "*"

@@ -1,11 +1,10 @@
 package arm32x.minecraft.armorswap;
 
-import me.lortseam.completeconfig.gui.ConfigScreenBuilder;
-import me.lortseam.completeconfig.gui.cloth.ClothConfigScreenBuilder;
+import me.shedaniel.autoconfig.AutoConfig;
+import me.shedaniel.autoconfig.serializer.Toml4jConfigSerializer;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
-import net.fabricmc.loader.api.FabricLoader;
 
 @Environment(EnvType.CLIENT)
 public final class ArmorSwap implements ClientModInitializer {
@@ -13,11 +12,7 @@ public final class ArmorSwap implements ClientModInitializer {
 
 	@Override
 	public void onInitializeClient() {
-		if (FabricLoader.getInstance().isModLoaded("cloth-config2")) {
-			ConfigScreenBuilder.setMain("armor-swap", new ClothConfigScreenBuilder());
-		}
-
-		config = new ArmorSwapConfig();
-		config.load();
+		AutoConfig.register(ArmorSwapConfig.class, Toml4jConfigSerializer::new);
+		config = AutoConfig.getConfigHolder(ArmorSwapConfig.class).getConfig();
 	}
 }

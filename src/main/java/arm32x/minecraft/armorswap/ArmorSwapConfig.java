@@ -1,26 +1,22 @@
 package arm32x.minecraft.armorswap;
 
-import me.lortseam.completeconfig.api.ConfigContainer;
-import me.lortseam.completeconfig.api.ConfigContainer.Transitive;
-import me.lortseam.completeconfig.api.ConfigEntries;
-import me.lortseam.completeconfig.api.ConfigEntry;
-import me.lortseam.completeconfig.api.ConfigGroup;
-import me.lortseam.completeconfig.data.Config;
+import me.shedaniel.autoconfig.ConfigData;
+import me.shedaniel.autoconfig.annotation.Config;
+import me.shedaniel.autoconfig.annotation.ConfigEntry;
 import net.minecraft.screen.slot.SlotActionType;
 import net.minecraft.util.ClickType;
 
-public final class ArmorSwapConfig extends Config implements ConfigContainer {
-	@Transitive
+@Config(name = "armor-swap")
+public final class ArmorSwapConfig implements ConfigData {
+	@ConfigEntry.Gui.CollapsibleObject()
 	public Trigger trigger = new Trigger();
 
-	public ArmorSwapConfig() {
-		super("armor-swap");
-	}
-
-	@ConfigEntries
-	public static class Trigger implements ConfigGroup {
-		@ConfigEntry.Dropdown
+	public static class Trigger {
+		@ConfigEntry.Gui.EnumHandler(option = ConfigEntry.Gui.EnumHandler.EnumDisplayOption.BUTTON)
 		public SlotActionType actionType = SlotActionType.PICKUP;
+
+		@ConfigEntry.Gui.PrefixText
+		@ConfigEntry.Gui.EnumHandler(option = ConfigEntry.Gui.EnumHandler.EnumDisplayOption.BUTTON)
 		public ClickType mouseButton = ClickType.RIGHT;
 	}
 }

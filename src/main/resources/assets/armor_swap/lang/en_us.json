@@ -1,13 +1,7 @@
 {
-    "config.armor-swap.trigger.actionType": "Action Type",
-    "config.armor-swap.trigger.actionType.pickup": "Pickup (Click)",
-    "config.armor-swap.trigger.actionType.quickMove": "Quick Move (Shift-Click)",
-    "config.armor-swap.trigger.actionType.swap": "Swap (1-9)",
-    "config.armor-swap.trigger.actionType.clone": "Clone (Pick Block)",
-    "config.armor-swap.trigger.actionType.throw": "Throw/Drop",
-    "config.armor-swap.trigger.actionType.quickCraft": "Quick Craft (Drag)",
-    "config.armor-swap.trigger.actionType.pickupAll": "Pickup All (Double Click)",
-    "config.armor-swap.trigger.mouseButton": "Mouse Button",
-    "config.armor-swap.trigger.mouseButton.primary": "Left",
-    "config.armor-swap.trigger.mouseButton.secondary": "Right"
+    "text.autoconfig.armor-swap.title": "Armor Swap",
+    "text.autoconfig.armor-swap.option.trigger": "Trigger Condition",
+    "text.autoconfig.armor-swap.option.trigger.actionType": "Action Type",
+    "text.autoconfig.armor-swap.option.trigger.mouseButton.@PrefixText": "PICKUP: Click\nQUICK_MOVE: Shift-click\nSWAP: Number keys 1-9\nCLONE: Pick Block key\nTHROW: Throw/Drop key\nQUICK_CRAFT: Mouse drag\nPICKUP_ALL: Double-click",
+    "text.autoconfig.armor-swap.option.trigger.mouseButton": "Mouse Button"
 }
